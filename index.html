@@ -3,12 +3,20 @@
 <style>
 
 header {
-  margin: 20px 0;
+  margin: 50px 0 50px;
+  padding: 0 20px;
 }
 
 body {
   text-align: center;
   margin: 0 auto;
+  color: white;
+  background: black;
+  font-family: monospace;
+}
+
+a {
+  color: white;
 }
 
 ol {
@@ -22,23 +30,34 @@ ol {
 li {
   padding: 0;
   text-align: center;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 header p img {
-  max-height: 23px;
+  max-height: 20px;
   vertical-align: middle;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
 
 </style>
 <header>
   <h1>1337 repos</h1>
-  <p>Github repositories with <img src="data:image/png;base64,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" alt=""> github stars.</p>
-  <img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif">
+  <p>Github repositories with <img src="1337stars.png" alt=""> github stars.</p>
 </header>
+
 <main>
-  <ol>
-  </ol>
+  <ol></ol>
 </main>
+
+<footer>
+  created by <a href="https://twitter.com/reimertz">@reimertz</a>
+</footer>
 
 <script>
 var ol = document.querySelector('main > ol')
